@@ -1,6 +1,6 @@
 This is a fairly simple ESP32-C project to monitor some website like a poor man's Uptime Kuma.
 
-The ESP32 will boot up, get an Wi-FI IP address, and then start do the checks.  The WiFi SSID/password are hard coded in the source, so need to recompile and flash if they need to change.  The ESP32 has a website you can navitate to but is unsecure.  Allos you to see the status and add/remove services.  The LCD display will also show basic info like SSID, IP Address, MAC Addr, and then green/red for basic status for pass/fail.  The RGG LED is just cyclying constantly as a way to show that the ESP32 is running.  If the ESP32 were to hang (stop running), then the RBG would stop cycling.
+The ESP32 will boot up, get an Wi-FI IP address, and then start do the checks.  The WiFi SSID/password are hard coded in the source, so need to recompile and flash if they need to change.  The ESP32 has a website you can navigate to but is unsecure.  Website allows you to see the status and add/remove services.  The LCD display will also show basic info like SSID, IP Address, MAC Addr, and then green/red for basic status for pass/fail.  The RGG LED is just cyclying constantly as a way to show that the ESP32 is running.  If the ESP32 were to hang (stop running), then the RBG would stop cycling.
 
 Comparsion of the ESP32 versions
     https://products.espressif.com/static/Espressif%20SoC%20Product%20Portfolio.pdf
