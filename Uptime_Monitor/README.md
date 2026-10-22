@@ -11,7 +11,6 @@ Comparsion of the ESP32 versions
 
 
 = Waveshare ESP32-C6 1.47 inch LED
-==========================================
 Main website
     https://www.waveshare.com/esp32-c6-lcd-1.47.htm
 
