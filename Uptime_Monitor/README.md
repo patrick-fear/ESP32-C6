@@ -10,7 +10,7 @@ Comparsion of the ESP32 versions
     https://products.espressif.com/static/Espressif%20SoC%20Product%20Portfolio.pdf
 
 
-= Waveshare ESP32-C6 1.47 inch LED
+# Waveshare ESP32-C6 1.47 inch LED
 Main website
     https://www.waveshare.com/esp32-c6-lcd-1.47.htm
 
@@ -21,13 +21,11 @@ Schematic PDF:
     https://files.waveshare.com/wiki/ESP32-C6-LCD-1.47/ESP32-C6-LCD-1.47_schemetics.pdf
 
 
-= ESP32-C6
-==================
+# ESP32-C6
 ESP-IDF support ESP32-C6 nativelty, including the LP core version.
 
 
-= Partition
-===================
+# Partition
 The Waveshare ESP32-C6 board docs indicate a 4MB SPI flash.  The SPI flash is
 actualy embedded inside the ESP32-C6 devcie.  But using the ESP-IDF tools, they
 report back a 8MB SPI flash.  So Override the 'SDK Configuraiotn Editor' setting
@@ -38,50 +36,43 @@ flash to the main program.  Change the 'SDK Configuraiton Editor' setting
 'Custom partition CSV file' ESPTOOLPY_FLASHSIZE to point to this partion file.
 
 
-= Source files
-======================
+# Source files
 New source file need to add to the CMakeList.txt file specificaly after adding
 the file.  Or change CMakeList.txt file to add all *.* files:
     https://esp32.com/viewtopic.php?t=39259
 Also need to add the header files to also include.
 
 
-= Errors and Panic handler
-==================================
+# Errors and Panic handler
 Fatal errors and panic hanlder.  Adjust to reboot or not.  Use 'SDK
 Configuraiton Editor' and 'Panic handler behavior' ESP_SYSTEM_PANIC to adjust
 setting.  More info at:
     https://docs.espressif.com/projects/esp-idf/en/release-v4.2/esp32/api-guides/fatal-errors.html
 
 
-= UART
-==============
+# UART
 The ESP32-C6 has a UART output over the USB port.  ESP-IDF default supports UART output.
 
 
-= Logging
-=================
+# Logging
 ESP-IDF uses ESP_LOGx() for logging.
 ESP-IDF uses printf() for output to UART.
 Mabye alternativaly can look at adding '#define CORE_DEBUG_LEVEL 4' at the top of the
 source file before the '#include "esp_log.h"'.
 
 
-= FreeRTOS
-==================
+# FreeRTOS
 ESP-IDF has FreeROTS already builtin with multi tasking.  There is no 'setup()'
 just the 'app_maiin()'.
 
 
-= LCD Display
-=====================
+# LCD Display
 Use 'SDK Configuraiton Editor' setting 'Enable built-in fonts' and the differnet
 check buttons.  Default is LV_FONT_MONTSERRAT_14, but can enable/disable more
 fonts as needed.
 
 
-= Uptime Monitor
-========================
+# Uptime Monitor
 The Uptime Monitor parts are based off the XDA article:
     https://www.xda-developers.com/built-uptime-monitor-esp32-powerful/
 This artical then points to the github source:
@@ -91,13 +82,11 @@ respondes that are also valid like temporary move.  So add those to the valid
 status as well.
 
 
-= TODO
-===============
+# TODO
 * Curretnly WiFi uses event group to notify http server and UptimeMonitor.  Could look more at doing a task suspend/notify, but need to consider what if ping is running when suspend?
 
 
-= History
-=================
+# History
 v0.5.0
 2025/11/22
 * Add WiFi setup taskf.
