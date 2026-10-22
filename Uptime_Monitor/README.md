@@ -45,7 +45,7 @@ ESP-IDF uses ESP_LOGx() for logging.  ESP-IDF uses printf() for output to UART. 
 
 
 # FreeRTOS
-ESP-IDF has FreeROTS already builtin with multi tasking.  There is no 'setup()' just the 'app_maiin()'.
+ESP-IDF has FreeROTS already builtin with multi tasking.  There is no 'setup()' just the 'app_main()'.
 
 
 # LCD Display
