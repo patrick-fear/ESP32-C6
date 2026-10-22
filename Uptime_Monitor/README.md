@@ -26,14 +26,7 @@ ESP-IDF support ESP32-C6 nativelty, including the LP core version.
 
 
 # Partition
-The Waveshare ESP32-C6 board docs indicate a 4MB SPI flash.  The SPI flash is
-actualy embedded inside the ESP32-C6 devcie.  But using the ESP-IDF tools, they
-report back a 8MB SPI flash.  So Override the 'SDK Configuraiotn Editor' setting
-'Flash Size' ESPTOOLPY_FLASHSIZE to set to 8MB.  Create custom partition file
-'my_partitions_singleapp.csv' and indicate a 'app' of '4MB' to give half of
-flash to the main program.  Change the 'SDK Configuraiton Editor' setting
-'Partition Table' PARTITION_TALBE to 'Custom partition table CSV' and then
-'Custom partition CSV file' ESPTOOLPY_FLASHSIZE to point to this partion file.
+The Waveshare ESP32-C6 board docs indicate a 4MB SPI flash.  The SPI flash is actually embedded inside the ESP32-C6 device.  But using the ESP-IDF tools, they report back a 8MB SPI flash.  So Override the 'SDK Configuraiotn Editor' setting 'Flash Size' ESPTOOLPY_FLASHSIZE to set to 8MB.  Create custom partition file 'my_partitions_singleapp.csv' and indicate a 'app' of '4MB' to give half of flash to the main program.  Change the 'SDK Configuration Editor' setting 'Partition Table' PARTITION_TALBE to 'Custom partition table CSV' and then 'Custom partition CSV file' ESPTOOLPY_FLASHSIZE to point to this partition file.
 
 
 # Source files
@@ -68,9 +61,7 @@ The Uptime Monitor parts are based off the XDA article:
     https://www.xda-developers.com/built-uptime-monitor-esp32-powerful/
 This artical then points to the github source:
     https://github.com/Incipiens/ESP32-Uptime-Monitoring/tree/main
-Original source only handles HTTP GET responses of 200.  But there are other
-respondes that are also valid like temporary move.  So add those to the valid
-status as well.
+Original source only handles HTTP GET responses of 200.  But there are other respondes that are also valid like temporary move.  So add those to the valid status as well.
 
 
 # TODO
