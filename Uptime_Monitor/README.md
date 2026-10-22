@@ -87,41 +87,32 @@ status as well.
 
 
 # History
-v0.5.0
-2025/11/22
+## v0.5.0 2025/11/22
 * Add WiFi setup taskf.
 
-v0.6.0
-2025/11/22
+## v0.6.0 2025/11/22
 * Change task so that WiFi setup task sends signal to UptimeMonitor task to
   start.
 
-v0.7.0
-2025/11/22
-* Add TFT display task.  Use queue to send data to display task to then update
-  the display.
-* Add initial yellow color to display on first initialize, so that can tell
-  that its not red failed yet.
+## v0.7.0 2025/11/22
+* Add TFT display task.  Use queue to send data to display task to then update the display.
+* Add initial yellow color to display on first initialize, so that can tell that its not red failed yet.
 
-v0.8.0
-2025/11/23
+## v0.8.0 2025/11/23
 * Cleanup some Serial.print to instead use Serial.printf.
 * Cleanup some logging to add messages for queue fails.
 * Convert some Serial.print() to instead use ESP_LOGx().
 
-v0.9.0
-2025/11/23
-* Change platform tool version from '54.03.20' to '55.03.34'.  This will cause
-  an increase in the image size.
+## v0.9.0 2025/11/23
+* Change platform tool version from '54.03.20' to '55.03.34'.  This will cause an increase in the image size.
 * Change the partition from 'board_build.partitions = my_partitions.csv' to
   'board_build.partitions = my_partitions_8MB'.  ESP.getFlashChipSize() keeps
   reporting 8MB Flash.  The latest esptool https://github.com/espressif/esptool
   also shows as 8MB Flash and chip type as 'ESP32-C6FH8' and not 'ESP32-C6FH4'.
-* Change the board from 'board = esp32-c6-devkitm-1' to
-  'board = esp32-c6-devkitc-1' to reflect 8MB Flash and Bluetooth.
+* Change the board from 'board = esp32-c6-devkitm-1' to 'board = esp32-c6-devkitc-1' to reflect 8MB Flash and Bluetooth.
 * Add attiaional build flag 'build_flags = -D ESP32_C6_env'.
 
-v1.0.0 12/06/2025
+## v1.0.0 12/06/2025
 * Inital version of conversion from PlatformIO to ESP-IDF.
 * Set Panic from panic and reboot to panic only, so that can debug easier.
 * Add FreeRTOS task to log out task details for debug.
@@ -132,14 +123,13 @@ v1.0.0 12/06/2025
 * Add mDNS support for WiFi interface.
 * Add placeholder support in http server for Favicon URL, but disabled for now.
 
-v1.1.0 12/07/2025
-* Add semaphore lock/unlock to RGB_LED to avoid any accidental calling of
-  functions outside of Task_RGB_LED.
+## v1.1.0 12/07/2025
+* Add semaphore lock/unlock to RGB_LED to avoid any accidental calling of functions outside of Task_RGB_LED.
 
-v1.2.0 12/07/2025
+## v1.2.0 12/07/2025
 * Additional columns/info added to the FreeRTOS debug logging.
 
-v1.3.0 12/08/2025
+## v1.3.0 12/08/2025
 * Change Task_WiFi and Task_UptimeMonitor from using semaphore to instead use
   event group from wifi_setup.cpp and the event handler connect/disconnect.
   Task_WiFiSetup no longer notifies Task_UptimeMonitor.  Instead
@@ -147,5 +137,5 @@ v1.3.0 12/08/2025
   Task_Server also uses the event group to start/stop the http server.
 * Cleanup and delete unused function UptimeMonitor_setup.
 
-v1.4.0 01/02/2025
+## v1.4.0 01/02/2025
 * Reduce the http buffer size MAX_USER_DATA_BUFFER_SIZE from x24 to x20.
