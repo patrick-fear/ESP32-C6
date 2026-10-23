@@ -51,6 +51,12 @@ ESP-IDF has FreeROTS already builtin with multi tasking.  There is no 'setup()' 
 # LCD Display
 Use 'SDK Configuraiton Editor' setting 'Enable built-in fonts' and the differnet check buttons.  Default is LV_FONT_MONTSERRAT_14, but can enable/disable more fonts as needed.
 
+# Component Update
+In Terminal window from Visual Studio Code run:
+    idf.py update-dependencies
+More info:
+    https://docs.espressif.com/projects/esp-idf/en/v5.2/esp32/api-guides/tools/idf-component-manager.html
+
 
 # Uptime Monitor
 The Uptime Monitor parts are based off the XDA article:
