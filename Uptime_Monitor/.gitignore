@@ -1,3 +1,12 @@
+# ESP-IDF Build Directories and temporary files
 build/
 sdkconfig
 sdkconfig.old
+
+# Component manager dependencies
+managed_components/
+dependencies.lock
+
+# Python / Log caches
+__pycache__/
+*.log
